@@ -2,6 +2,7 @@
     --primary-color: #E0E8FF;
     --button-color: #382AE1;
     --font-color: #717FA6;
+    
 }
 
 *{
@@ -22,11 +23,15 @@ a{
     text-decoration: none;
 }
 
-.bg-component{
+.bg-component--desktop{
     width: 100%;
     height: 80%;
     position: absolute;
     z-index: -1;
+}
+
+.bg-component--mobile{
+    display: none;
 }
 
 .main-container{
@@ -119,4 +124,33 @@ a{
     color: var(--font-color);
     font-size: 1.3rem;
     font-weight: bold;
+}
+
+@media (max-width: 375px){
+    .bg-component--mobile{
+        width: 100%;
+        height: 80%;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .bg-component--desktop{
+        display: none;
+    }
+    
+    .order-card{
+        width: 300px;
+    }
+
+    .order-card__buttons button{
+        width: 200px;
+    }
+
+    .order-card__price{
+        padding: 20px 30px;
+        
+    }
+    .order-card__info{
+        padding: 20px 30px;
+    }
 }
